@@ -246,6 +246,7 @@ class BinaryReaderImpl extends BinaryReader {
 
     var frameLength = readUint32();
     if (frameLength < 8) {
+      print('Corrupted Hive could occur here with frameLength $frameLength');
       frameLength = 9;
 //       throw HiveError(
 //           'This should not happen. Please open an issue on GitHub.');
